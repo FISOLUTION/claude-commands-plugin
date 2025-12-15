@@ -98,13 +98,13 @@ GitHub 이슈를 확인하거나 생성하는 서브에이전트입니다.
 claude-commands-plugin/
 ├── .claude-plugin/
 │   ├── marketplace.json    # 마켓플레이스 정의
-│   └── plugin.json         # 플러그인 매니페스트
-├── agents/
-│   ├── create-issue.md     # 이슈 생성/확인 에이전트
-│   └── create-context.md   # CONTEXT.md 생성 에이전트
-├── commands/
-│   ├── commit.md           # /commit 커맨드
-│   └── pr.md               # /pr 커맨드
+│   ├── plugin.json         # 플러그인 매니페스트
+│   ├── agents/
+│   │   ├── create-issue.md     # 이슈 생성/확인 에이전트
+│   │   └── create-context.md   # CONTEXT.md 생성 에이전트
+│   └── commands/
+│       ├── commit.md           # /commit 커맨드
+│       └── pr.md               # /pr 커맨드
 └── README.md
 ```
 
