@@ -10,11 +10,11 @@
   "license": "MIT",
   "keywords": ["commit", "pr", "issue", "context", "github", "workflow"],
   "commands": [
-    "./commands/commit.md",
-    "./commands/pr.md"
+    "./.claude-plugin/commands/commit.md",
+    "./.claude-plugin/commands/pr.md"
   ],
   "agents": [
-    "./agents/create-issue.md",
-    "./agents/create-context.md"
+    "./.claude-plugin/agents/create-issue.md",
+    "./.claude-plugin/agents/create-context.md"
   ]
 }
