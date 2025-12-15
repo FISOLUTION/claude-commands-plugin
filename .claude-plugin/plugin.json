@@ -1,0 +1,14 @@
+{
+  "name": "common-tools",
+  "version": "1.0.0",
+  "description": "에프아이솔루션 Claude Code 공용 도구 플러그인",
+  "author": {
+    "name": "FISOLUTION",
+    "email": "fisdev@fisolution.co.kr"
+  },
+  "repository": "https://github.com/FISOLUTION/claude-commands-plugin",
+  "license": "MIT",
+  "keywords": ["commit", "pr", "issue", "context", "github", "workflow"],
+  "commands": "../commands/",
+  "agents": "../agents/"
+}
