@@ -39,10 +39,11 @@ description: 현재 브랜치의 변경사항으로 GitHub PR을 생성합니다
    - 이슈 생성/조회만 수행되고, 결과는 `ISSUE.md`에 저장됩니다.
 3. `ISSUE.md`의 이슈 정보를 바탕으로 브랜치명을 변경합니다:
    ```bash
-   git branch -m {issue-type}/{issue-number}-{short-description}
+   git branch -m {branch-type}/{issue-number}-{short-description}
    # 예: git branch -m feature/12-add-user-auth
    ```
-   - `issue-type`: 이슈 타입 (feature, fix, refactor, docs, chore, test)
+   - `branch-type`: 브랜치 타입 (feature, fix, refactor, docs, chore, test)
+     - **중요**: 이슈 레이블이 `feat`이더라도 브랜치명에는 반드시 `feature`를 사용합니다 (feat → feature)
    - `issue-number`: 생성/조회된 이슈 번호
    - `short-description`: 작업 내용을 간략히 설명하는 영문 (kebab-case)
 4. 브랜치명이 변경되면, 변경된 브랜치명으로 아래 단계를 계속 진행합니다.
