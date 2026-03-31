@@ -78,7 +78,7 @@ description: 현재 브랜치의 변경사항으로 GitHub PR을 생성합니다
 ### 3단계: PR 생성
 작성된 본문 파일로 PR을 생성합니다:
 ```bash
-gh pr create --base main --body-file pr_body.md --title "$(git rev-parse --abbrev-ref HEAD)"
+gh pr create --base develop --body-file pr_body.md --title "$(git rev-parse --abbrev-ref HEAD)"
 ```
 - `--body-file pr_body.md`: 2단계에서 작성된 본문 파일 사용
 - `--title`: 현재 브랜치 이름을 PR 제목으로 사용 (이후 PR Automation이 덮어씀)
