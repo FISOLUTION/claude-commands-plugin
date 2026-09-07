@@ -1,6 +1,6 @@
 {
   "name": "common-tools",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "에프아이솔루션 Claude Code 공용 도구 플러그인",
   "author": {
     "name": "FISOLUTION",
@@ -8,10 +8,19 @@
   },
   "repository": "https://github.com/FISOLUTION/claude-commands-plugin",
   "license": "MIT",
-  "keywords": ["commit", "pr", "issue", "context", "github", "workflow"],
+  "keywords": [
+    "commit",
+    "pr",
+    "issue",
+    "context",
+    "clean-up",
+    "github",
+    "workflow"
+  ],
   "commands": [
     "./.claude-plugin/commands/commit.md",
-    "./.claude-plugin/commands/pr.md"
+    "./.claude-plugin/commands/pr.md",
+    "./.claude-plugin/commands/clean-up.md"
   ],
   "agents": [
     "./.claude-plugin/agents/create-issue.md",

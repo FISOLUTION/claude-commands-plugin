@@ -43,7 +43,7 @@
 **특징:**
 - Conventional Commits 형식 사용 (`feat:`, `fix:`, `refactor:` 등)
 - 한국어로 간결한 커밋 메시지 작성
-- 한 줄 커밋 메시지 (본문 없음)
+- 양식에 맞는 제목 한 줄만 작성 (본문, 트레일러 없음)
 - 변경사항을 논리적 단위로 분할하여 커밋
 
 **예시:**
@@ -60,9 +60,20 @@ refactor: 이미지 정보 필드를 추가 정보 필드로 변경
 **특징:**
 - 브랜치명 검증 (`{issue-type}/{issue-number}-{description}` 형식)
 - PR 템플릿 자동 적용
-- `CONTEXT.md` 파일이 있으면 참고사항에 자동 포함
 - `ISSUE.md` 파일 연동
 - 브랜치명이 형식에 맞지 않으면 `create-issue` 에이전트를 호출하여 이슈 생성
+- 작업 내용은 5줄 이내 요약, 참고사항은 코드만으로 이해하기 어려운 배경이 있을 때만 2줄 이내, 기타는 다음 이슈로 지정한 후속 작업만 작성
+- 예제 코드, 이모지, 강조 표기, 세밀한 작업 사유는 작성하지 않음
+
+### `/clean-up`
+
+PR이 병합된 후 작업 브랜치를 정리하고 `develop`을 최신화합니다.
+
+**특징:**
+- 현재 브랜치의 PR이 `MERGED` 상태인지 확인 (아니면 중단)
+- `develop`으로 이동 후 작업 브랜치 삭제 (로컬 및 원격)
+- `git pull origin develop`으로 병합 사항 반영
+- `ISSUE.md`, `CONTEXT.md`, `pr_body.md` 등 임시 작업 파일 삭제
 
 ## 제공 에이전트
 
@@ -104,7 +115,8 @@ claude-commands-plugin/
 │   │   └── create-context.md   # CONTEXT.md 생성 에이전트
 │   └── commands/
 │       ├── commit.md           # /commit 커맨드
-│       └── pr.md               # /pr 커맨드
+│       ├── pr.md               # /pr 커맨드
+│       └── clean-up.md         # /clean-up 커맨드
 └── README.md
 ```
 

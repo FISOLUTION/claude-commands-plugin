@@ -1,3 +1,8 @@
+---
+allowed-tools: Bash(git:*)
+description: 누적된 변경사항을 Conventional Commits 형식으로 나누어 커밋합니다
+---
+
 # Commit Command
 
 - 누적된 변경사항을 적절히 나누어 커밋합니다.
@@ -6,8 +11,12 @@
 
 1. **Conventional Commits** 형식 사용
 2. **모든 메시지는 한국어로 간결히 작성**
-3. **커밋 메시지는 한 줄로만 작성** (제목만, 본문 없음)
-4. **커밋 설명(description/body)은 절대 작성하지 않음**
+3. **커밋 메시지는 양식에 맞는 제목 한 줄만 작성** (본문 없음)
+4. **커밋 본문(body/description)은 절대 작성하지 않음**
+   - 작업 내용 설명, bullet point, 변경 사유 등 어떤 내용도 본문에 추가하지 않음
+   - `Co-Authored-By`, `Generated with` 등의 트레일러(trailer)도 추가하지 않음
+   - heredoc(`$(cat <<'EOF' ... EOF)`)을 사용한 다중 행 메시지 금지
+   - 허용되는 유일한 형태: `git commit -m "<타입>: <설명>"`
 
 ### 형식
 
@@ -62,10 +71,12 @@ style: prettier 적용
 
 4. **한 줄 커밋 메시지 생성**
    - 위 규칙에 따라 `<타입>: <설명>` 형태로 **한국어로 간결히** 작성
-   - 본문/설명 절대 금지
+   - 본문/설명/트레일러 절대 금지
 
 5. **git commit 실행**
    - `git commit -m "<타입>: <설명>"`
+   - `-m` 옵션을 두 번 이상 사용하거나 heredoc으로 본문을 추가하지 않음
+   - 커밋 후 `git log -1 --format=%B` 로 메시지가 제목 한 줄인지 확인
 
 6. **[반복] 남은 변경사항에 대해 3~5단계를 반복**
    - `git status` 로 남은 변경 확인

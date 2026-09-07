@@ -13,13 +13,13 @@
       "name": "common-tools",
       "source": "./",
       "description": "에프아이솔루션 Claude Code 공용 도구 플러그인 (커맨드, 에이전트)",
-      "version": "1.0.2",
+      "version": "1.1.0",
       "author": {
         "name": "FISOLUTION",
         "email": "fisdev@fisolution.co.kr"
       },
       "category": "workflow",
-      "tags": ["commit", "pr", "issue", "context", "github", "korean"]
+      "tags": ["commit", "pr", "issue", "context", "clean-up", "github", "korean"]
     }
   ]
 }
